@@ -1,0 +1,47 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwjkt86biakap"]
+
+[ext_resource type="Texture2D" uid="uid://ce4i0vbca5vm2" path="res://Images/bag.png" id="1_h3m8e"]
+[ext_resource type="PackedScene" uid="uid://cylcsmya46f" path="res://Inventory/slot.tscn" id="2_nckja"]
+
+[node name="Inventory" type="PanelContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("1_h3m8e")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="SlotGrid" type="GridContainer" parent="."]
+layout_mode = 2
+theme_override_constants/h_separation = 30
+theme_override_constants/v_separation = 30
+columns = 3
+
+[node name="Slot" parent="SlotGrid" instance=ExtResource("2_nckja")]
+layout_mode = 2
+
+[node name="Slot2" parent="SlotGrid" instance=ExtResource("2_nckja")]
+layout_mode = 2
+
+[node name="Slot3" parent="SlotGrid" instance=ExtResource("2_nckja")]
+layout_mode = 2
+
+[node name="Slot4" parent="SlotGrid" instance=ExtResource("2_nckja")]
+layout_mode = 2
+
+[node name="Slot5" parent="SlotGrid" instance=ExtResource("2_nckja")]
+layout_mode = 2
+
+[node name="Slot6" parent="SlotGrid" instance=ExtResource("2_nckja")]
+layout_mode = 2
+
+[node name="Slot7" parent="SlotGrid" instance=ExtResource("2_nckja")]
+layout_mode = 2
+
+[node name="Slot8" parent="SlotGrid" instance=ExtResource("2_nckja")]
+layout_mode = 2
+
+[node name="Slot9" parent="SlotGrid" instance=ExtResource("2_nckja")]
+layout_mode = 2
