@@ -1,0 +1,142 @@
+[gd_scene load_steps=17 format=3 uid="uid://dhl7nxjg3gp1h"]
+
+[ext_resource type="PackedScene" uid="uid://b0mrxpk86n77w" path="res://player.tscn" id="1_racbl"]
+[ext_resource type="Script" path="res://bar1_breath_control.gd" id="2_32lgb"]
+[ext_resource type="Script" path="res://breath_control.gd" id="3_d5hqf"]
+[ext_resource type="Texture2D" uid="uid://chw1s16kgl302" path="res://Images/black.jpg" id="5_arb02"]
+[ext_resource type="Texture2D" uid="uid://bvt1ljsml15a5" path="res://Images/Ball.png" id="5_w1vru"]
+[ext_resource type="Script" path="res://ball_move_control.gd" id="6_ubo5m"]
+[ext_resource type="Texture2D" uid="uid://bdgmdi3jswucj" path="res://Images/arrow.png" id="7_dj2tn"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7tgkt"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_hihia"]
+sky_material = SubResource("ProceduralSkyMaterial_7tgkt")
+
+[sub_resource type="Environment" id="Environment_yipfy"]
+background_mode = 2
+sky = SubResource("Sky_hihia")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_0d711"]
+size = Vector2(20, 20)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_a2fnh"]
+data = PackedVector3Array(10, 0, 10, -10, 0, 10, 10, 0, -10, -10, 0, 10, -10, 0, -10, 10, 0, -10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uhe4d"]
+size = Vector2(3, 59)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_33tpt"]
+size = Vector2(4, 59)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7n5q7"]
+size = Vector2(34.25, 59)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8lg7i"]
+radius = 27.0
+
+[node name="Main" type="Node"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_yipfy")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Ground" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_0d711")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Ground"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_a2fnh")
+
+[node name="Player" parent="." instance=ExtResource("1_racbl")]
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Fear" type="ProgressBar" parent="UI"]
+offset_left = 65.0
+offset_top = 400.0
+offset_right = 365.0
+offset_bottom = 427.0
+rotation = -1.5708
+show_percentage = false
+
+[node name="Air" type="ProgressBar" parent="UI"]
+offset_top = 400.0
+offset_right = 300.0
+offset_bottom = 427.0
+rotation = -1.5708
+show_percentage = false
+script = ExtResource("2_32lgb")
+
+[node name="InventoryInterface" type="Control" parent="UI"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 712.0
+offset_top = 586.0
+offset_right = 1139.0
+offset_bottom = 633.0
+
+[node name="Control" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_d5hqf")
+
+[node name="Box" type="TextureRect" parent="UI/Control"]
+layout_mode = 0
+offset_left = 711.0
+offset_top = 547.0
+offset_right = 1123.0
+offset_bottom = 606.0
+texture = ExtResource("5_arb02")
+expand_mode = 1
+
+[node name="AreaRight" type="Area2D" parent="UI/Control/Box"]
+position = Vector2(416, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UI/Control/Box/AreaRight"]
+position = Vector2(-3, 29.5)
+shape = SubResource("RectangleShape2D_uhe4d")
+
+[node name="AreaLeft" type="Area2D" parent="UI/Control/Box"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UI/Control/Box/AreaLeft"]
+position = Vector2(-1, 29.5)
+shape = SubResource("RectangleShape2D_33tpt")
+
+[node name="ClickZone" type="Area2D" parent="UI/Control/Box"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UI/Control/Box/ClickZone"]
+position = Vector2(215, 29.5)
+shape = SubResource("RectangleShape2D_7n5q7")
+
+[node name="Ball" type="TextureRect" parent="UI/Control"]
+layout_mode = 0
+offset_left = 1071.0
+offset_top = 554.0
+offset_right = 1116.0
+offset_bottom = 599.0
+texture = ExtResource("5_w1vru")
+stretch_mode = 4
+
+[node name="Area2D" type="Area2D" parent="UI/Control/Ball"]
+script = ExtResource("6_ubo5m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UI/Control/Ball/Area2D"]
+position = Vector2(22, 21)
+shape = SubResource("CircleShape2D_8lg7i")
+
+[node name="Sprite2D" type="Sprite2D" parent="UI"]
+position = Vector2(926, 509)
+scale = Vector2(0.303144, 0.294679)
+texture = ExtResource("7_dj2tn")

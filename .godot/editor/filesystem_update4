@@ -1,0 +1,4 @@
+res://main.tscn
+res://global_variables.gd
+res://bar1_breath_control.gd
+res://ball_move_control.gd
