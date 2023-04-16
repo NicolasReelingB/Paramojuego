@@ -1,3 +1,6 @@
+Timer
+CollisionShape3D
+Area3D
 ProgressBar
 CollisionShape2D
 Area2D

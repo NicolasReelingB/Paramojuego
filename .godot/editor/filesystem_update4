@@ -1,4 +1,7 @@
 res://main.tscn
-res://global_variables.gd
-res://bar1_breath_control.gd
 res://ball_move_control.gd
+res://bar2_fear_control.gd
+res://global_variables.gd
+res://trigger_controler.gd
+res://player.tscn
+res://timer_launch.gd

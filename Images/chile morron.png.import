@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ct6m8gb36i6bv"
-path="res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.ctex"
+uid="uid://cfd8hiw12hia3"
+path="res://.godot/imported/chile morron.png-ba58292a9d93c61db897aec7d7f85b1e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://icon.png"
-dest_files=["res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.ctex"]
+source_file="res://Images/chile morron.png"
+dest_files=["res://.godot/imported/chile morron.png-ba58292a9d93c61db897aec7d7f85b1e.ctex"]
 
 [params]
 
