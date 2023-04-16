@@ -14,6 +14,3 @@ func validate_solution(solution: String):
 
 func is_solved():
 	return solved
-
-func print_attrs():
-	print(str(length) + " " + str(solution))
