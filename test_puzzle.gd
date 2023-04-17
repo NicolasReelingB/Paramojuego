@@ -1,6 +1,6 @@
 extends Node
 
-#var puzzle = CombinationPuzzle.new(4, "1583")
+#var puzzle = CombinationPuzzle.new("1583")
 var puzzle = SequencePuzzle.new(3)
 
 func _ready():

@@ -1,6 +1,30 @@
-[gd_scene load_steps=2 format=3 uid="uid://yr7kaucsela7"]
+[gd_scene load_steps=3 format=3 uid="uid://yr7kaucsela7"]
 
-[ext_resource type="Script" path="res://test_puzzle.gd" id="1_wpogc"]
+[ext_resource type="Script" path="res://lock_puzzle.gd" id="1_iqdgl"]
 
-[node name="Node" type="Node"]
-script = ExtResource("1_wpogc")
+[sub_resource type="BoxMesh" id="BoxMesh_ywbfj"]
+
+[node name="LockPuzzle" type="Node"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.931069, 0.364844, 0, -0.364844, 0.931069, 2.38419e-07, 1.4839, 2.88679)
+
+[node name="Lock" type="Node3D" parent="."]
+script = ExtResource("1_iqdgl")
+solution = "1234"
+
+[node name="Number" type="MeshInstance3D" parent="Lock"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 0)
+mesh = SubResource("BoxMesh_ywbfj")
+
+[node name="Number2" type="MeshInstance3D" parent="Lock"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0)
+mesh = SubResource("BoxMesh_ywbfj")
+
+[node name="Number3" type="MeshInstance3D" parent="Lock"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0)
+mesh = SubResource("BoxMesh_ywbfj")
+
+[node name="Number4" type="MeshInstance3D" parent="Lock"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 0)
+mesh = SubResource("BoxMesh_ywbfj")
