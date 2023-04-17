@@ -24,9 +24,9 @@ func _process(delta):
 	
 	#Change digit position
 	if Input.is_action_just_pressed("ui_right"):
-		current_index = clamp(current_index + 1, 0, sides - 1)
+		current_index = clamp(current_index + 1, 0, get_child_count())
 	elif Input.is_action_just_pressed("ui_left"):
-		current_index = clamp(current_index - 1, 0, sides - 1)
+		current_index = clamp(current_index - 1, 0, get_child_count())
 	
 	#Change digit value
 	var current_object = get_child(current_index)
