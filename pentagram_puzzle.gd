@@ -2,37 +2,36 @@ extends Node3D
 
 @export var init_positions = [0, 0]
 @export var solution = [0, 0]
-@export var minute_step = 1
 
 var puzzle: RotationPuzzle
-var hour_delta: float = 30
-var minute_delta: float = 6
+var outer_delta = 90
+var inner_delta = 45
 
 func _ready():
 	puzzle = RotationPuzzle.new(2, solution)
 
 func _process(delta):
 	if Input.is_action_just_pressed("check_puzzle"):
-		print(get_time())
+		print(check_positions())
 		print(solution)
-		print(puzzle.validate_solution(get_time()))
+		print(puzzle.validate_solution(check_positions()))
 	
-	#Clock movement
+	#Pentagram movement
 	if Input.is_action_just_pressed("ui_up"):
-		$ShortHand.rotation_degrees.z -= hour_delta
+		$OuterCircle.rotation_degrees.y += outer_delta
 	elif Input.is_action_just_pressed("ui_down"):
-		$ShortHand.rotation_degrees.z += hour_delta
+		$OuterCircle.rotation_degrees.y -= outer_delta
 	
 	if Input.is_action_just_pressed("ui_right"):
-		$LongHand.rotation_degrees.z -= minute_delta * minute_step
+		$InnerCircle.rotation_degrees.y += inner_delta
 	elif Input.is_action_just_pressed("ui_left"):
-		$LongHand.rotation_degrees.z += minute_delta * minute_step
+		$InnerCircle.rotation_degrees.y -= inner_delta
 
-func get_time():
-	var hour = int(ceilf(filter_angle($ShortHand.rotation_degrees.z * -1)) / hour_delta) % 12
-	var minute = int(ceilf(filter_angle($LongHand.rotation_degrees.z * -1)) / minute_delta) % 60
+func check_positions():
+	var outer_position = int(filter_angle($OuterCircle.rotation_degrees.y) / outer_delta) % 4
+	var inner_position = int(filter_angle($InnerCircle.rotation_degrees.y) / inner_delta) % 8
 	
-	return [hour, minute]
+	return [outer_position, inner_position]
 
 func filter_angle(angle):
 	if angle >= 0 and angle <= 360:
