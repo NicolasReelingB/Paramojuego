@@ -8,7 +8,6 @@ var values: Array
 var current_index: int = 2
 var init_index: int = 2
 var delta_rotation = 36
-var target_rotation
 
 func _ready():
 	puzzle = CombinationPuzzle.new(solution)

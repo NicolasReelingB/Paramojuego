@@ -1,13 +1,11 @@
 class_name RotationPuzzle
 
 var elements: int
-var initial_positions: Array
 var solution: Array
 var solved: bool = false
 
-func _init(elements: int, initial_positions: Array, solution: Array):
+func _init(elements: int, solution: Array):
 	self.elements = elements
-	self.initial_positions = initial_positions
 	self.solution = solution
 
 func validate_solution(positions: Array):
