@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Game Jam Lv 99"
-run/main_scene="res://king_of_diamonds_scene.tscn"
+run/main_scene="res://blackjack_scene.tscn"
 config/features=PackedStringArray("4.0", "Forward Plus")
 
 [autoload]

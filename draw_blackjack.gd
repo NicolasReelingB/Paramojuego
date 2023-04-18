@@ -11,7 +11,7 @@ var counter : int = 0
 
 var random = RandomNumberGenerator.new()
 
-var deck = [["Ace of Hearts", 11, true],
+var deck = [["Ace of Hearts", 11, false],
 	["2 of Hearts", 2, false],
 	["3 of Hearts", 3, false],
 	["4 of Hearts", 4, false],
