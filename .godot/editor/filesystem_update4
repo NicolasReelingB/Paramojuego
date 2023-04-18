@@ -1,7 +1,5 @@
-res://main.tscn
-res://ball_move_control.gd
-res://bar2_fear_control.gd
-res://global_variables.gd
-res://trigger_controler.gd
+res://king_of_diamonds_scene.tscn
+res://king_of_diamonds.gd
 res://player.tscn
-res://timer_launch.gd
+res://main.tscn
+res://blackjack_scene.tscn

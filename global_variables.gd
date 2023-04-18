@@ -1,9 +1,10 @@
 extends Node
 
-var value : int = -8
+var value : float = -6.0
 var touch_borders : bool = false
 var air : int = 100
 var fear_high : bool = false
+var sanity = 100
 
 func change_direction():
 	value *= -1

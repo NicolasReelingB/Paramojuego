@@ -24,11 +24,11 @@ func _physics_process(delta):
 		print("Calm down")
 		
 	if(fear.value >= 70 and not Global.fear_high):
-		Global.value *= 2
+		Global.value *= 1.5
 		Global.fear_high = true
 		
 	elif fear.value < 70 and Global.fear_high:
-		Global.value /= 2
+		Global.value /= 1.5
 		Global.fear_high = false
 	
 #

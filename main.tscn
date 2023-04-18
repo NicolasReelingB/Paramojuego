@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://dhl7nxjg3gp1h"]
+[gd_scene load_steps=22 format=3 uid="uid://co8cnx3i36r4y"]
 
 [ext_resource type="PackedScene" uid="uid://b0mrxpk86n77w" path="res://player.tscn" id="1_racbl"]
 [ext_resource type="Script" path="res://bar1_breath_control.gd" id="2_32lgb"]
@@ -9,6 +9,8 @@
 [ext_resource type="Script" path="res://ball_move_control.gd" id="6_ubo5m"]
 [ext_resource type="Texture2D" uid="uid://bdgmdi3jswucj" path="res://Images/arrow.png" id="7_dj2tn"]
 [ext_resource type="Texture2D" uid="uid://cfd8hiw12hia3" path="res://Images/chile morron.png" id="8_yearo"]
+[ext_resource type="PackedScene" uid="uid://b5ly5fpl15s62" path="res://Models with Colliders/Bar.dae" id="10_bgmse"]
+[ext_resource type="PackedScene" uid="uid://brk75p6k1k6wb" path="res://Models with Colliders/BFH.dae" id="11_es40c"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7tgkt"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -53,11 +55,13 @@ transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75
 shadow_enabled = true
 
 [node name="Ground" type="MeshInstance3D" parent="."]
+transform = Transform3D(15.9716, 0, 0, 0, 1.7235, 0, 0, 0, 7.53334, 0, 0, 0)
 mesh = SubResource("PlaneMesh_0d711")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Ground"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 0.999999, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_a2fnh")
 
 [node name="Player" parent="." instance=ExtResource("1_racbl")]
@@ -161,3 +165,9 @@ texture = ExtResource("8_yearo")
 position = Vector2(926, 509)
 scale = Vector2(0.303144, 0.294679)
 texture = ExtResource("7_dj2tn")
+
+[node name="Bar" parent="." instance=ExtResource("10_bgmse")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 18)
+
+[node name="BFH" parent="." instance=ExtResource("11_es40c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.2186, 15.5124, 7.16515)

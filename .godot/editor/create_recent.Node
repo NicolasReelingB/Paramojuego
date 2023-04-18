@@ -1,5 +1,15 @@
-Timer
+Label
+Node
+Button
+LineEdit
+SpinBox
+CodeEdit
+MeshInstance3D
+StaticBody3D
 CollisionShape3D
+Camera3D
+CharacterBody3D
+Timer
 Area3D
 ProgressBar
 CollisionShape2D
