@@ -1,16 +1,34 @@
-[gd_scene load_steps=2 format=3 uid="uid://cylcsmya46f"]
+[gd_scene load_steps=3 format=3 uid="uid://bx61q63sq6dsd"]
 
-[ext_resource type="Texture2D" uid="uid://clt8fxaique26" path="res://Images/slot.png" id="1_bc44r"]
+[ext_resource type="Texture2D" uid="uid://clt8fxaique26" path="res://Images/slot.png" id="1_1p0m2"]
+[ext_resource type="Script" path="res://Inventory/slot.gd" id="1_rqyny"]
 
 [node name="Slot" type="Panel"]
-custom_minimum_size = Vector2(16, 16)
+custom_minimum_size = Vector2(200, 200)
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("1_rqyny")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="SlotFrame" type="TextureRect" parent="."]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
-texture = ExtResource("1_bc44r")
-expand_mode = 1
+texture = ExtResource("1_1p0m2")
 stretch_mode = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="SlotFrame"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="Item" type="TextureRect" parent="SlotFrame/MarginContainer"]
+layout_mode = 2
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
