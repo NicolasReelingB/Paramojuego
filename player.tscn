@@ -1,25 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://b0mrxpk86n77w"]
+[gd_scene load_steps=3 format=3 uid="uid://b0mrxpk86n77w"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_55b5q"]
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_wyt05"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2cf3a"]
 
 [node name="Player" type="CharacterBody3D"]
-collision_layer = 2
+collision_layer = 3
+collision_mask = 3
 script = ExtResource("1_55b5q")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-mesh = SubResource("CapsuleMesh_wyt05")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_2cf3a")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.53256, 0)
 
 [node name="InteractRay" type="RayCast3D" parent="Camera3D"]
 target_position = Vector3(0, 0, -2.5)

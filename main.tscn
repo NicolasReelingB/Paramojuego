@@ -1,8 +1,8 @@
-[gd_scene load_steps=17 format=3 uid="uid://c62ldlsgljhkl"]
+[gd_scene load_steps=14 format=3 uid="uid://c62ldlsgljhkl"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_1wylg"]
 [ext_resource type="PackedScene" uid="uid://b0mrxpk86n77w" path="res://player.tscn" id="1_racbl"]
-[ext_resource type="PackedScene" uid="uid://cu0hn35aqmdbp" path="res://Inventory/Inventory.tscn" id="2_2hs6j"]
+[ext_resource type="PackedScene" uid="uid://cu0hn35aqmdbp" path="res://Inventory/inventory.tscn" id="2_2hs6j"]
 [ext_resource type="Resource" uid="uid://by1ga4r2ofron" path="res://inventory_struct.tres" id="2_cg8pp"]
 [ext_resource type="Script" path="res://Inventory/inventory_interface.gd" id="4_mussi"]
 [ext_resource type="PackedScene" uid="uid://ddmfdforhtkwd" path="res://InteractableItems/rock.tscn" id="4_od1x5"]
@@ -10,19 +10,6 @@
 [ext_resource type="Resource" uid="uid://cvldb6ktcl117" path="res://Inventory/Items/Codex.tres" id="6_cjb75"]
 [ext_resource type="PackedScene" uid="uid://bx61q63sq6dsd" path="res://Inventory/slot.tscn" id="6_i7q6t"]
 [ext_resource type="Script" path="res://Inventory/slot_data.gd" id="7_k07ju"]
-
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7tgkt"]
-sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
-ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
-
-[sub_resource type="Sky" id="Sky_hihia"]
-sky_material = SubResource("ProceduralSkyMaterial_7tgkt")
-
-[sub_resource type="Environment" id="Environment_yipfy"]
-background_mode = 2
-sky = SubResource("Sky_hihia")
-tonemap_mode = 2
-glow_enabled = true
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_0d711"]
 size = Vector2(20, 20)
@@ -36,13 +23,6 @@ item_data = ExtResource("6_cjb75")
 
 [node name="Main" type="Node"]
 script = ExtResource("1_1wylg")
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_yipfy")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
-shadow_enabled = true
 
 [node name="Ground" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.84155, -0.902787, 2.11434)

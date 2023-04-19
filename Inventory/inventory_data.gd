@@ -32,6 +32,15 @@ func pick_up_item(slot_data: SlotData) -> bool:
 	
 	return false
 
+func add_item(slot_data: SlotData) -> bool:
+	for index in slot_datas.size():
+		if slot_datas[index] == null:
+			slot_datas[index] = slot_data
+			inventory_updated.emit(self)
+			return true
+	
+	return false	
+
 func on_slot_clicked(index: int, button: int) -> void:
 	#print("inventory")
 	inventory_interact.emit(self, index, button)

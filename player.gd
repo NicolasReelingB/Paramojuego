@@ -16,7 +16,6 @@ signal toggle_inventory()
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
-
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
 		rotate_y(-event.relative.x * .005)
@@ -57,4 +56,9 @@ func _physics_process(delta: float) -> void:
 
 func interact() -> void:
 	if interact_ray.is_colliding():
-		print("interact with ", interact_ray.get_collider())
+		var interactedItem = interact_ray.get_collider().slot_data
+		if interactedItem is SlotData:
+			if inventory_data.add_item(interactedItem):
+				print("Test3")
+				interact_ray.get_collider().queue_free()
+
