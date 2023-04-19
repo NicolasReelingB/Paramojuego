@@ -1,6 +1,6 @@
-res://king_of_diamonds_scene.tscn
-res://king_of_diamonds.gd
-res://player.tscn
 res://main.tscn
-res://blackjack_scene.tscn
-res://draw_blackjack.gd
+res://Inventory/Items/Codex.tres
+res://Inventory/Items/Skull.tres
+res://inventory_struct.tres
+res://SaveAndLoad/save_test.gd
+res://SaveAndLoad/SaveLoadData.gd
