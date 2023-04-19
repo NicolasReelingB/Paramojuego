@@ -1,0 +1,54 @@
+[gd_scene load_steps=3 format=3 uid="uid://bkvox8ji3omf8"]
+
+[ext_resource type="Script" path="res://draw_blackjack.gd" id="1_6pr1n"]
+[ext_resource type="Script" path="res://stop_blackjack.gd" id="2_vsjov"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Name of card" type="Label" parent="."]
+layout_mode = 0
+offset_left = 84.0
+offset_top = 57.0
+offset_right = 322.0
+offset_bottom = 112.0
+text = "asfsafasfasfasfsafaf"
+
+[node name="Counter" type="Label" parent="."]
+layout_mode = 0
+offset_left = 833.0
+offset_top = 69.0
+offset_right = 1020.0
+offset_bottom = 131.0
+text = "asfasfasfasfasfsaf"
+
+[node name="Give" type="Button" parent="."]
+layout_mode = 0
+offset_left = 309.0
+offset_top = 531.0
+offset_right = 443.0
+offset_bottom = 603.0
+text = "Dame uwu"
+script = ExtResource("1_6pr1n")
+
+[node name="Victory" type="Label" parent="."]
+layout_mode = 0
+offset_left = 393.0
+offset_top = 390.0
+offset_right = 670.0
+offset_bottom = 485.0
+text = "asdsafsafasfasfasfsafd"
+
+[node name="Stop" type="Button" parent="."]
+layout_mode = 0
+offset_left = 537.0
+offset_top = 531.0
+offset_right = 657.0
+offset_bottom = 600.0
+text = "Yamete kudasai"
+script = ExtResource("2_vsjov")
