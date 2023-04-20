@@ -1,6 +1,5 @@
 res://main.tscn
-res://Inventory/Items/Codex.tres
-res://Inventory/Items/Skull.tres
-res://inventory_struct.tres
+res://Inventory/Inventory.gd
 res://SaveAndLoad/save_test.gd
 res://SaveAndLoad/SaveLoadData.gd
+res://Inventory/inventory.tscn

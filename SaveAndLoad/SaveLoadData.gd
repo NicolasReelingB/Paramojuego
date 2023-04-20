@@ -3,19 +3,19 @@ extends Resource
 
 const SAVE_FILE_PATH = "user://save_data.tres"
 
-var game_data: GameData = GameData.new()
+var _game_data: GameData = GameData.new()
 
 func _init():
-	load_game_data()
+	_game_data = load_game_data()
 
 func save_game_data() -> void:
-	game_data.update_data(Global.current_stage, Global.sanity, load("res://inventory_struct.tres"))
-	ResourceSaver.save(game_data, SAVE_FILE_PATH)
+	_game_data.update_data(Global.current_stage, Global.sanity, load("res://inventory_struct.tres"))
+	ResourceSaver.save(_game_data, SAVE_FILE_PATH)
 
 func load_game_data() -> Resource:
 	if not ResourceLoader.exists(SAVE_FILE_PATH):
 		save_game_data()
-	return ResourceLoader.load(SAVE_FILE_PATH).duplicate(true)
+	return ResourceLoader.load(SAVE_FILE_PATH)
 
 """
 func load_game_data():
