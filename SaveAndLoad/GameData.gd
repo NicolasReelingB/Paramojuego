@@ -3,9 +3,9 @@ extends Resource
 
 @export var current_stage: int = 0
 @export var sanity: int = 100
-@export var inventory: Resource = null
+@export var inventory: Array[SlotData]
 
-func update_data(current_stage: int, sanity: int, inventory: Resource):
+func update_data(current_stage: int, sanity: int, inventory: Array[SlotData]):
 	self.current_stage = current_stage
 	self.sanity = sanity
 	self.inventory = inventory

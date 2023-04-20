@@ -8,20 +8,11 @@ var _game_data: GameData = GameData.new()
 func _init():
 	_game_data = load_game_data()
 
-func save_game_data() -> void:
-	_game_data.update_data(Global.current_stage, Global.sanity, load("res://inventory_struct.tres"))
+func save_game_data(inventory: Array[SlotData]) -> void:
+	_game_data.update_data(Global.current_stage, Global.sanity, inventory)
 	ResourceSaver.save(_game_data, SAVE_FILE_PATH)
 
 func load_game_data() -> Resource:
 	if not ResourceLoader.exists(SAVE_FILE_PATH):
-		save_game_data()
+		save_game_data(load("res://inventory_default.tres").slot_datas)
 	return ResourceLoader.load(SAVE_FILE_PATH)
-
-"""
-func load_game_data():
-	if not ResourceLoader.has_cached(SAVE_FILE_PATH):
-		return ResourceLoader.load(SAVE_FILE_PATH)
-	
-	if FileAccess.open(SAVE_FILE_PATH, FileAccess.READ) != OK:
-		printerr("Couldn't read file: " + SAVE_FILE_PATH)
-"""
