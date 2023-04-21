@@ -1,11 +1,7 @@
-res://main.tscn
-res://Inventory/Inventory.gd
-res://SaveAndLoad/save_test.gd
 res://player.gd
-res://Inventory/Items/Codex.tres
-res://inventory_struct.tres
-res://save_data.tres
-res://SaveAndLoad/GameData.gd
-res://Inventory/inventory.tscn
-res://inventory_default.tres
-res://SaveAndLoad/SaveLoadData.gd
+res://main.tscn
+res://Stages/StageManager.tscn
+res://Stages/main_menu.tscn
+res://Stages/PauseMenu.tscn
+res://Stages/PauseMenu.gd
+res://SaveAndLoad/save_test.gd

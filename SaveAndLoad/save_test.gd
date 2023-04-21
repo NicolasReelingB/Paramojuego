@@ -30,6 +30,9 @@ func _ready():
 			print(item.item_data.name)
 
 func _process(delta):
+	#if Input.is_action_just_pressed("pause"):
+	#	PauseMenu.pause_game()
+	
 	if Input.is_action_just_pressed("save"):
 		print("Saving data...")
 		save_load_data.save_game_data($Player.get("inventory_data").slot_datas)

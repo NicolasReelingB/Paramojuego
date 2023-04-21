@@ -1,6 +1,11 @@
-Label
-Node
 Button
+CanvasLayer
+Label
+AnimationPlayer
+ColorRect
+CanvasModulate
+Node2D
+Node
 LineEdit
 SpinBox
 CodeEdit
@@ -16,7 +21,6 @@ CollisionShape2D
 Area2D
 Sprite2D
 Container
-Node2D
 TextureRect
 Control
 MeshInstance2D

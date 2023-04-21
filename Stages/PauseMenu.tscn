@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://baee084jrmxfy"]
+
+[ext_resource type="Script" path="res://Stages/PauseMenu.gd" id="1_g5iyx"]
+
+[node name="PauseMenu" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_g5iyx")
+
+[node name="Continue" type="Button" parent="."]
+offset_left = 466.0
+offset_top = 271.0
+offset_right = 685.0
+offset_bottom = 373.0
+text = "Continue"
+
+[connection signal="pressed" from="Continue" to="." method="_on_continue_pressed"]
