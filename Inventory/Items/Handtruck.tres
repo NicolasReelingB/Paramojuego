@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="SlotData" load_steps=4 format=3 uid="uid://db48vrmpxo2ul"]
+
+[ext_resource type="Script" path="res://Inventory/item_data.gd" id="1_8u8ia"]
+[ext_resource type="Script" path="res://Inventory/slot_data.gd" id="1_wspkb"]
+
+[sub_resource type="Resource" id="Resource_o5cy2"]
+script = ExtResource("1_8u8ia")
+name = "Handtruck"
+description = "A restored Handtruck. It allows for one to move heavy objects with ease."
+
+[resource]
+script = ExtResource("1_wspkb")
+item_data = SubResource("Resource_o5cy2")

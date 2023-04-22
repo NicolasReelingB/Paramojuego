@@ -20,6 +20,9 @@ func on_inventory_interact(inventory_data: InventoryData,index: int, button: int
 			grabbedItem = inventory_data.grab_slot_data(index)
 		[_, MOUSE_BUTTON_LEFT]:
 			grabbedItem = inventory_data.drop_slot_data(grabbedItem, index)
+		[_, MOUSE_BUTTON_RIGHT]:
+			if grabbedItem != null and index != null:
+				grabbedItem = inventory_data.combine_items(grabbedItem, index)
 	
 	update_grabbed_item()
 
@@ -29,3 +32,13 @@ func update_grabbed_item() -> void:
 		grabbed_slot.set_slot_data(grabbedItem)
 	else:
 		grabbed_slot.hide()
+
+
+func _on_gui_input(event):
+	if event is InputEventMouseButton \
+			and event.is_pressed() \
+			and grabbedItem:
+		match event.button_index:
+			MOUSE_BUTTON_LEFT:
+				grabbedItem = null
+				update_grabbed_item()

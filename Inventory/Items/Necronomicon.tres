@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="SlotData" load_steps=6 format=3 uid="uid://g72137b6vefg"]
+
+[ext_resource type="Script" path="res://Inventory/slot_data.gd" id="1_e3n8o"]
+[ext_resource type="Script" path="res://Inventory/item_data.gd" id="1_yovxs"]
+[ext_resource type="Texture2D" uid="uid://cpxuvoxocvx63" path="res://Images/#1 - Transparent Icons.png" id="2_gr5n3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1n1rd"]
+atlas = ExtResource("2_gr5n3")
+region = Rect2(192, 416, 32, 32)
+
+[sub_resource type="Resource" id="Resource_d84pf"]
+script = ExtResource("1_yovxs")
+name = "Necronomicon"
+description = "Forbidden item of inmense power. A fusion between the essence of death itself and all secrets of Paramo."
+texture = SubResource("AtlasTexture_1n1rd")
+
+[resource]
+script = ExtResource("1_e3n8o")
+item_data = SubResource("Resource_d84pf")

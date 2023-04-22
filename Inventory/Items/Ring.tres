@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="SlotData" load_steps=4 format=3 uid="uid://drln3t70n2q80"]
+
+[ext_resource type="Script" path="res://Inventory/slot_data.gd" id="1_osxra"]
+[ext_resource type="Script" path="res://Inventory/item_data.gd" id="1_qwxtg"]
+
+[sub_resource type="Resource" id="Resource_widt3"]
+script = ExtResource("1_qwxtg")
+name = "Ring"
+description = "Your mother's last memento. A shining silver ring, it emanates a  glow that reminds you of days gone past."
+
+[resource]
+script = ExtResource("1_osxra")
+item_data = SubResource("Resource_widt3")

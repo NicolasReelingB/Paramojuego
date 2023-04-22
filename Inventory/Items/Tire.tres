@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="SlotData" load_steps=4 format=3 uid="uid://df1v0q40kv0x8"]
+
+[ext_resource type="Script" path="res://Inventory/slot_data.gd" id="1_if72u"]
+[ext_resource type="Script" path="res://Inventory/item_data.gd" id="1_yjrmt"]
+
+[sub_resource type="Resource" id="Resource_3dm0r"]
+script = ExtResource("1_yjrmt")
+name = "Tire"
+description = "An old and beaten tire. It looks positively ancient yet still functional."
+
+[resource]
+script = ExtResource("1_if72u")
+item_data = SubResource("Resource_3dm0r")

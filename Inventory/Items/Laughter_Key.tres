@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="SlotData" load_steps=4 format=3 uid="uid://cj58kbm5cba5o"]
+
+[ext_resource type="Script" path="res://Inventory/slot_data.gd" id="1_g3ibe"]
+[ext_resource type="Script" path="res://Inventory/item_data.gd" id="1_hgu0b"]
+
+[sub_resource type="Resource" id="Resource_lhdax"]
+script = ExtResource("1_hgu0b")
+name = "Laughter Key"
+description = "A key that signifies passageway to a joyous occasion. A reuniong with your family awaits behind the door that this key opens."
+
+[resource]
+script = ExtResource("1_g3ibe")
+item_data = SubResource("Resource_lhdax")

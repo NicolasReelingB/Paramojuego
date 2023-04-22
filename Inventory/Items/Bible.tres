@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="SlotData" load_steps=4 format=3 uid="uid://d3x0po32euoah"]
+
+[ext_resource type="Script" path="res://Inventory/item_data.gd" id="1_fql6e"]
+[ext_resource type="Script" path="res://Inventory/slot_data.gd" id="1_i1dwf"]
+
+[sub_resource type="Resource" id="Resource_tc2a8"]
+script = ExtResource("1_fql6e")
+name = "Bible"
+description = "A well-used bible. It seems to have a strange reddish tint to it."
+
+[resource]
+script = ExtResource("1_i1dwf")
+item_data = SubResource("Resource_tc2a8")

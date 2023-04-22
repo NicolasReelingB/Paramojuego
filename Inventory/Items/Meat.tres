@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="SlotData" load_steps=4 format=3 uid="uid://byohmf2id0ser"]
+
+[ext_resource type="Script" path="res://Inventory/slot_data.gd" id="1_elipi"]
+[ext_resource type="Script" path="res://Inventory/item_data.gd" id="1_lc7kh"]
+
+[sub_resource type="Resource" id="Resource_gi2x1"]
+script = ExtResource("1_lc7kh")
+name = "Meat"
+description = "Scrumptious looking meat"
+
+[resource]
+script = ExtResource("1_elipi")
+item_data = SubResource("Resource_gi2x1")

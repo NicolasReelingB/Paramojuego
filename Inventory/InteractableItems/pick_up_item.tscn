@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://bqqsvaw7dr2gt"]
+[gd_scene load_steps=5 format=3 uid="uid://bx014qgr3efjx"]
 
 [ext_resource type="Texture2D" uid="uid://uimte1ccbad" path="res://Inventory/Items/item_atlas.tres" id="1_abajd"]
-[ext_resource type="Script" path="res://InteractableItems/pick_up_item.gd" id="1_htkqg"]
+[ext_resource type="Script" path="res://Inventory/InteractableItems/pick_up_item.gd" id="1_htkqg"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_bcn0n"]
 

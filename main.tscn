@@ -1,12 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://c62ldlsgljhkl"]
+[gd_scene load_steps=13 format=3 uid="uid://ciea74w6gpvna"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_1wylg"]
 [ext_resource type="PackedScene" uid="uid://b0mrxpk86n77w" path="res://player.tscn" id="1_racbl"]
 [ext_resource type="PackedScene" uid="uid://cu0hn35aqmdbp" path="res://Inventory/inventory.tscn" id="2_2hs6j"]
 [ext_resource type="Resource" uid="uid://by1ga4r2ofron" path="res://inventory_struct.tres" id="2_cg8pp"]
 [ext_resource type="Script" path="res://Inventory/inventory_interface.gd" id="4_mussi"]
-[ext_resource type="PackedScene" uid="uid://ddmfdforhtkwd" path="res://InteractableItems/rock.tscn" id="4_od1x5"]
-[ext_resource type="PackedScene" uid="uid://bqqsvaw7dr2gt" path="res://InteractableItems/pick_up_item.tscn" id="5_2veis"]
+[ext_resource type="PackedScene" uid="uid://bx014qgr3efjx" path="res://Inventory/InteractableItems/pick_up_item.tscn" id="5_2veis"]
 [ext_resource type="Resource" uid="uid://cvldb6ktcl117" path="res://Inventory/Items/Codex.tres" id="6_cjb75"]
 [ext_resource type="PackedScene" uid="uid://bx61q63sq6dsd" path="res://Inventory/slot.tscn" id="6_i7q6t"]
 [ext_resource type="Script" path="res://Inventory/slot_data.gd" id="7_k07ju"]
@@ -36,9 +35,6 @@ shape = SubResource("ConcavePolygonShape3D_a2fnh")
 [node name="Player" parent="." instance=ExtResource("1_racbl")]
 inventory_data = ExtResource("2_cg8pp")
 
-[node name="Rock" parent="." instance=ExtResource("4_od1x5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.295141, -0.875705, 3.20058)
-
 [node name="PickUpItem" parent="." instance=ExtResource("5_2veis")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.229038, 0.460017, 3.30662)
 slot_data = SubResource("Resource_bo02s")
@@ -67,3 +63,5 @@ self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_right = 200.0
 offset_bottom = 200.0
+
+[connection signal="gui_input" from="UI/InventoryInterface" to="UI/InventoryInterface" method="_on_gui_input"]
