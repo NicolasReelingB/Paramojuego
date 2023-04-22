@@ -1,5 +1,5 @@
 2a60927148abd1d33b818b535e306557
-::res://::1682034105
+::res://::1682127280
 ball_move_control.gd::GDScript::-1::1682031621::0::1::::<>Area2D<>::
 bar1_breath_control.gd::GDScript::-1::1682031621::0::1::::<>ProgressBar<>::
 bar_control.gd::GDScript::-1::1682031621::0::1::::<>ProgressBar<>::
@@ -12,12 +12,14 @@ inventory_struct.tres::Resource/Resource::4124992605252542293::1682031621::0::1:
 king_of_diamonds.gd::GDScript::-1::1682031621::0::1::::<>BaseButton<>::
 king_of_diamonds_scene.tscn::PackedScene::3550124887306780161::1682031621::0::1::::<><>::res://king_of_diamonds.gd
 main.gd::GDScript::-1::1682031621::0::1::::<>Node<>::
-main.tscn::PackedScene::5159932698320580152::1682033385::0::1::::<><>::uid://b0mrxpk86n77w<>res://SaveAndLoad/save_test.gd<>res://bar1_breath_control.gd<>res://trigger_controler.gd<>res://breath_control.gd<>uid://by1ga4r2ofron<>uid://chw1s16kgl302<>uid://bvt1ljsml15a5<>res://ball_move_control.gd<>uid://bdgmdi3jswucj<>uid://cfd8hiw12hia3<>uid://b5ly5fpl15s62<>uid://brk75p6k1k6wb
-player.gd::GDScript::-1::1682034244::0::1::::<>CharacterBody3D<>::
-player.tscn::PackedScene::4166988374669111246::1682031621::0::1::::<><>::res://player.gd
+main.tscn::PackedScene::5159932698320580152::1682126793::0::1::::<><>::uid://b0mrxpk86n77w<>res://SaveAndLoad/save_test.gd<>res://bar1_breath_control.gd<>res://trigger_controler.gd<>uid://58jkkqao0npi<>res://breath_control.gd<>uid://by1ga4r2ofron<>uid://chw1s16kgl302<>uid://bvt1ljsml15a5<>res://ball_move_control.gd<>uid://bdgmdi3jswucj<>uid://cfd8hiw12hia3<>uid://b5ly5fpl15s62<>uid://brk75p6k1k6wb
+Microtonico_PH.png::CompressedTexture2D::3943431387203475825::1682111493::1682111495::1::::<><>::
+player.gd::GDScript::-1::1682125971::0::1::::<>CharacterBody3D<>::
+player.tscn::PackedScene::4166988374669111246::1682126793::0::1::::<><>::res://player.gd
 stop_blackjack.gd::GDScript::-1::1682031621::0::1::::<>BaseButton<>::
 Town.glb::PackedScene::1601202206772484620::1682031621::1682031621::1::::<><>::
 trigger_controler.gd::GDScript::-1::1682031621::0::1::::<>Area3D<>::
+untitled.mp3::AudioStreamMP3::2249632289660338023::1682113128::1682113130::1::::<><>::
 ::res://Images/::1682031621
 #1 - Transparent Icons.png::CompressedTexture2D::5874407323324420062::1682031621::1682031621::1::::<><>::
 bag.png::CompressedTexture2D::5113995182223051383::1682031621::1682031621::1::::<><>::
@@ -51,15 +53,20 @@ TownHall.glb::PackedScene::4302541644232039177::1682031621::1682031621::1::::<><
 ::res://Models with Colliders/::1682031621
 Bar.dae::PackedScene::4516305216096824497::1682031621::1682031621::1::::<><>::
 BFH.dae::PackedScene::3602272156894640729::1682031621::1682031621::1::::<><>::
-::res://SaveAndLoad/::1682031621
+::res://Music/::1682113292
+mus_menu0.ogg::AudioStreamOggVorbis::8343423658510403948::1671664945::1682113292::1::::<><>::
+::res://SaveAndLoad/::1682035072
 GameData.gd::GDScript::-1::1682031621::0::1::::GameData<>Resource<>::
 SaveLoadData.gd::GDScript::-1::1682031621::0::1::::SaveLoadData<>Resource<>::
-save_test.gd::GDScript::-1::1682031621::0::1::::<>Node<>::
-::res://StageManager/::1682033385
-PauseMenu.tscn::PackedScene::2394967486030046190::1682034244::0::1::::<><>::
-StageManager.gd::GDScript::-1::1682033357::0::1::::<>CanvasLayer<>::
-StageManager.tscn::PackedScene::5399746985035765529::1682033385::0::1::::<><>::res://StageManager/StageManager.gd
-::res://Stages/::1682033386
-main_menu.gd::GDScript::-1::1682032981::0::1::::<>Node2D<>::
-main_menu.tscn::PackedScene::558107353197664504::1682033386::0::1::::<><>::res://Stages/main_menu.gd
-StageManager.tscn::PackedScene::5399746985035765529::1682034262::0::1::::<><>::res://StageManager/StageManager.gd
+save_test.gd::GDScript::-1::1682035072::0::1::::<>Node<>::
+::res://Stages/::1682126793
+Guts.png::CompressedTexture2D::4979607024457260758::1682110491::1682110494::1::::<><>::
+Intro.gd::GDScript::-1::1682111911::0::1::::<>Node2D<>::
+Intro.tscn::PackedScene::4622457045853847009::1682126793::0::1::::<><>::res://Stages/Intro.gd<>uid://bwgh0eb8lbcvh
+main_environment.tres::Environment::2174354635868970210::1682125971::0::1::::<><>::
+main_menu.gd::GDScript::-1::1682112050::0::1::::<>Control<>::
+main_menu.tscn::PackedScene::558107353197664504::1682126793::0::1::::<><>::res://Stages/main_menu.gd<>uid://b64fgsgcfbwov<>uid://cc7fnuuanasuw<>uid://dq4u761psfkme
+PauseMenu.gd::GDScript::-1::1682112150::0::1::::<>CanvasLayer<>::
+PauseMenu.tscn::PackedScene::2394967486030046190::1682126793::0::1::::<><>::res://Stages/PauseMenu.gd
+StageManager.gd::GDScript::-1::1682110710::0::1::::<>CanvasLayer<>::
+StageManager.tscn::PackedScene::8221663679519506675::1682126793::0::1::::<><>::res://Stages/StageManager.gd

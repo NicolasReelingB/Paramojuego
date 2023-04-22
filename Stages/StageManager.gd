@@ -13,6 +13,6 @@ func change_stage(stage_path):
 	await $Anim.animation_finished
 	get_tree().change_scene_to_file(stage_path)
 	$Anim.play("TransOut")
-	get_tree().paused = false #Optional
 	await $Anim.animation_finished
+	get_tree().paused = false #Optional
 	$ColorRect.hide()

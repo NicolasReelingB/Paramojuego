@@ -1,15 +1,59 @@
-[gd_scene load_steps=2 format=3 uid="uid://h7l7gh4dttlo"]
+[gd_scene load_steps=5 format=3 uid="uid://h7l7gh4dttlo"]
 
 [ext_resource type="Script" path="res://Stages/main_menu.gd" id="1_kpyys"]
+[ext_resource type="PackedScene" uid="uid://b64fgsgcfbwov" path="res://Stages/Intro.tscn" id="2_cuur1"]
+[ext_resource type="Texture2D" uid="uid://cc7fnuuanasuw" path="res://Stages/Guts.png" id="2_ean6f"]
+[ext_resource type="AudioStream" uid="uid://dq4u761psfkme" path="res://Music/mus_menu0.ogg" id="4_dxosn"]
 
-[node name="MainMenu" type="Node2D"]
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
 script = ExtResource("1_kpyys")
 
-[node name="Start" type="Button" parent="."]
-offset_left = 473.0
-offset_top = 291.0
-offset_right = 631.0
-offset_bottom = 379.0
+[node name="Intro" parent="." instance=ExtResource("2_cuur1")]
+
+[node name="Control" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1895.0
+offset_bottom = 1055.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Start" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 690.0
+offset_top = 600.0
+offset_right = 1190.0
+offset_bottom = 850.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 50
 text = "Start"
 
-[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[node name="Logo" type="Sprite2D" parent="Control"]
+position = Vector2(960, 356)
+texture = ExtResource("2_ean6f")
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_dxosn")
+autoplay = true
+
+[connection signal="intro_finished" from="Intro" to="." method="_on_node_2d_intro_finished"]
+[connection signal="pressed" from="Control/Start" to="." method="_on_start_pressed"]

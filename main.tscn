@@ -4,6 +4,7 @@
 [ext_resource type="Script" path="res://SaveAndLoad/save_test.gd" id="1_sgvjn"]
 [ext_resource type="Script" path="res://bar1_breath_control.gd" id="2_32lgb"]
 [ext_resource type="Script" path="res://trigger_controler.gd" id="2_bwjn8"]
+[ext_resource type="Environment" uid="uid://58jkkqao0npi" path="res://Stages/main_environment.tres" id="2_qxv7a"]
 [ext_resource type="Script" path="res://breath_control.gd" id="3_d5hqf"]
 [ext_resource type="Resource" uid="uid://by1ga4r2ofron" path="res://inventory_struct.tres" id="3_et38o"]
 [ext_resource type="Texture2D" uid="uid://chw1s16kgl302" path="res://Images/black.jpg" id="5_arb02"]
@@ -14,20 +15,11 @@
 [ext_resource type="PackedScene" uid="uid://b5ly5fpl15s62" path="res://Models with Colliders/Bar.dae" id="10_bgmse"]
 [ext_resource type="PackedScene" uid="uid://brk75p6k1k6wb" path="res://Models with Colliders/BFH.dae" id="11_es40c"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7tgkt"]
-sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
-ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
-
-[sub_resource type="Sky" id="Sky_hihia"]
-sky_material = SubResource("ProceduralSkyMaterial_7tgkt")
-
-[sub_resource type="Environment" id="Environment_yipfy"]
-background_mode = 2
-sky = SubResource("Sky_hihia")
-tonemap_mode = 2
-glow_enabled = true
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fea7p"]
+albedo_color = Color(0.552941, 0.32549, 0.0196078, 1)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_0d711"]
+material = SubResource("StandardMaterial3D_fea7p")
 size = Vector2(20, 20)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_a2fnh"]
@@ -47,11 +39,18 @@ size = Vector2(34.25, 59)
 [sub_resource type="CircleShape2D" id="CircleShape2D_8lg7i"]
 radius = 27.0
 
+[sub_resource type="FogMaterial" id="FogMaterial_3yjn3"]
+density = 0.5
+albedo = Color(0.654902, 0.654902, 0.654902, 1)
+emission = Color(0.443137, 0.443137, 0.443137, 1)
+height_falloff = 0.696443
+edge_fade = 0.373213
+
 [node name="Main" type="Node"]
 script = ExtResource("1_sgvjn")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_yipfy")
+environment = ExtResource("2_qxv7a")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
@@ -83,21 +82,30 @@ wait_time = 2.0
 
 [node name="UI" type="CanvasLayer" parent="."]
 
-[node name="Fear" type="ProgressBar" parent="UI"]
-offset_left = 65.0
-offset_top = 400.0
-offset_right = 365.0
-offset_bottom = 427.0
-rotation = -1.5708
-show_percentage = false
-
 [node name="Air" type="ProgressBar" parent="UI"]
-offset_top = 400.0
-offset_right = 300.0
-offset_bottom = 427.0
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 62.0
+offset_top = -41.0
+offset_right = 362.0
+offset_bottom = -14.0
+grow_vertical = 0
 rotation = -1.5708
 show_percentage = false
 script = ExtResource("2_32lgb")
+
+[node name="Fear" type="ProgressBar" parent="UI"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 132.0
+offset_top = -41.0
+offset_right = 432.0
+offset_bottom = -14.0
+grow_vertical = 0
+rotation = -1.5708
+show_percentage = false
 
 [node name="InventoryInterface" type="Control" parent="UI"]
 visible = false
@@ -110,17 +118,28 @@ offset_bottom = 633.0
 
 [node name="Control" type="Control" parent="UI"]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
 script = ExtResource("3_d5hqf")
+
+[node name="Sprite2D" type="Sprite2D" parent="UI/Control"]
+position = Vector2(-209, -110.625)
+scale = Vector2(0.303144, 0.294679)
+texture = ExtResource("7_dj2tn")
 
 [node name="Box" type="TextureRect" parent="UI/Control"]
 layout_mode = 0
-offset_left = 711.0
-offset_top = 547.0
-offset_right = 1123.0
-offset_bottom = 606.0
+offset_left = -424.0
+offset_top = -72.6248
+offset_right = -12.0
+offset_bottom = -13.6248
 texture = ExtResource("5_arb02")
 expand_mode = 1
 
@@ -145,10 +164,10 @@ shape = SubResource("RectangleShape2D_7n5q7")
 
 [node name="Ball" type="TextureRect" parent="UI/Control"]
 layout_mode = 0
-offset_left = 1071.0
-offset_top = 554.0
-offset_right = 1116.0
-offset_bottom = 599.0
+offset_left = -64.0
+offset_top = -65.6248
+offset_right = -19.0
+offset_bottom = -20.6248
 texture = ExtResource("5_w1vru")
 stretch_mode = 4
 
@@ -165,10 +184,10 @@ position = Vector2(572, 321)
 scale = Vector2(1.57237, 1.57568)
 texture = ExtResource("8_yearo")
 
-[node name="Sprite2D" type="Sprite2D" parent="UI"]
-position = Vector2(926, 509)
-scale = Vector2(0.303144, 0.294679)
-texture = ExtResource("7_dj2tn")
+[node name="FogVolume" type="FogVolume" parent="UI"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.758, 0, -2.952)
+size = Vector3(347.26, 1, 144.46)
+material = SubResource("FogMaterial_3yjn3")
 
 [node name="Bar" parent="." instance=ExtResource("10_bgmse")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 18)

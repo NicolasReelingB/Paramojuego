@@ -1,0 +1,18 @@
+[gd_resource type="Environment" load_steps=3 format=3 uid="uid://58jkkqao0npi"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7tgkt"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_hihia"]
+sky_material = SubResource("ProceduralSkyMaterial_7tgkt")
+
+[resource]
+background_mode = 2
+sky = SubResource("Sky_hihia")
+tonemap_mode = 2
+glow_enabled = true
+volumetric_fog_enabled = true
+volumetric_fog_emission = Color(0.360784, 0.360784, 0.360784, 1)
+volumetric_fog_detail_spread = 0.615572
+volumetric_fog_temporal_reprojection_amount = 0.99
