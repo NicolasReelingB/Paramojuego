@@ -1,6 +1,6 @@
 extends Node
 
-var value : float = -6.0
+var value : float = -400.0
 var touch_borders : bool = false
 var air : int = 100
 var fear_high : bool = false

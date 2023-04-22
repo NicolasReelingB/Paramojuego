@@ -6,3 +6,6 @@ res://Stages/main_menu.tscn
 res://Stages/PauseMenu.tscn
 res://Stages/Intro.tscn
 res://player.tscn
+res://breath_control.gd
+res://global_variables.gd
+res://bar1_breath_control.gd

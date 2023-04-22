@@ -5,4 +5,4 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	value -= 0.05
+	value -= 5 * delta
