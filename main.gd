@@ -13,3 +13,5 @@ func toggle_inventory_interface() -> void:
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	else:
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	if inventory_interface.letter_viewer.visible:
+		inventory_interface.letter_viewer.visible = not inventory_interface.letter_viewer.visible

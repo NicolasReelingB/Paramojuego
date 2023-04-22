@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://ciea74w6gpvna"]
+[gd_scene load_steps=14 format=3 uid="uid://ciea74w6gpvna"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_1wylg"]
 [ext_resource type="PackedScene" uid="uid://b0mrxpk86n77w" path="res://player.tscn" id="1_racbl"]
@@ -9,6 +9,7 @@
 [ext_resource type="Resource" uid="uid://cvldb6ktcl117" path="res://Inventory/Items/Codex.tres" id="6_cjb75"]
 [ext_resource type="PackedScene" uid="uid://bx61q63sq6dsd" path="res://Inventory/slot.tscn" id="6_i7q6t"]
 [ext_resource type="Script" path="res://Inventory/slot_data.gd" id="7_k07ju"]
+[ext_resource type="PackedScene" uid="uid://bm5cayrtm0d5l" path="res://Inventory/letter_viewer.tscn" id="10_psnp1"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_0d711"]
 size = Vector2(20, 20)
@@ -64,4 +65,25 @@ layout_mode = 0
 offset_right = 200.0
 offset_bottom = 200.0
 
+[node name="ToggleLetterInterface" type="Button" parent="UI/InventoryInterface"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -659.0
+offset_top = -100.0
+offset_right = -459.0
+offset_bottom = 100.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "Go to Codex"
+
+[node name="Letter_Viewer" parent="UI/InventoryInterface" instance=ExtResource("10_psnp1")]
+visible = false
+layout_mode = 1
+
 [connection signal="gui_input" from="UI/InventoryInterface" to="UI/InventoryInterface" method="_on_gui_input"]
+[connection signal="toggleLetterInterface" from="UI/InventoryInterface" to="." method="_on_inventory_interface_toggle_letter_interface"]
+[connection signal="pressed" from="UI/InventoryInterface/ToggleLetterInterface" to="UI/InventoryInterface" method="_on_toggle_letter_interface_pressed"]

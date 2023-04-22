@@ -4,6 +4,11 @@ var grabbedItem: SlotData
 
 @onready var player_inventory: PanelContainer = $PlayerInventory
 @onready var grabbed_slot: Panel = $GrabbedSlot
+@onready var toggle_letter_interface: Button = $ToggleLetterInterface
+@onready var letter_viewer = $Letter_Viewer
+
+
+signal toggleLetterInterface()
 
 func _physics_process(delta: float) -> void:
 	if grabbed_slot.visible:
@@ -42,3 +47,7 @@ func _on_gui_input(event):
 			MOUSE_BUTTON_LEFT:
 				grabbedItem = null
 				update_grabbed_item()
+
+
+func _on_toggle_letter_interface_pressed():
+	letter_viewer.visible = not letter_viewer.visible

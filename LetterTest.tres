@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="LetterData" load_steps=3 format=3 uid="uid://cp7gh288ut6dh"]
+
+[ext_resource type="FontFile" uid="uid://5dgw3ruom3xo" path="res://Fonts/SecretCodeRegular-1ylg.ttf" id="1_4s258"]
+[ext_resource type="Script" path="res://Inventory/letter.gd" id="1_mpel0"]
+
+[resource]
+script = ExtResource("1_mpel0")
+title = "Fall of Humanity"
+body = "[font=res://Fonts/SecretCodeRegular-1ylg.ttf]Humanity has fallen, and we can do nothing to stop it. The end approaches. [/font]"
+font = ExtResource("1_4s258")
+collected = false
