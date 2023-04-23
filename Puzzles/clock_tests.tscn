@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bslektc22qp64"]
 
-[ext_resource type="Script" path="res://clock_puzzle.gd" id="1_bosap"]
+[ext_resource type="Script" path="res://Puzzles/clock_puzzle.gd" id="1_5b7d0"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_7s1a6"]
 
@@ -10,8 +10,7 @@
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.29665)
 
 [node name="Clock" type="Node3D" parent="."]
-script = ExtResource("1_bosap")
-solution = [9, 30]
+script = ExtResource("1_5b7d0")
 
 [node name="LongHand" type="Node3D" parent="Clock"]
 

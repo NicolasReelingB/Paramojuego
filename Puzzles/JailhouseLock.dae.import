@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://be4xpfh23ar8q"
-path="res://.godot/imported/JailhouseLock.dae-6d69522328a0375201c3d189e79c34f3.scn"
+path="res://.godot/imported/JailhouseLock.dae-ec6d09c1b00ebe6a763c67e14c416fbb.scn"
 
 [deps]
 
-source_file="res://JailhouseLock.dae"
-dest_files=["res://.godot/imported/JailhouseLock.dae-6d69522328a0375201c3d189e79c34f3.scn"]
+source_file="res://Puzzles/JailhouseLock.dae"
+dest_files=["res://.godot/imported/JailhouseLock.dae-ec6d09c1b00ebe6a763c67e14c416fbb.scn"]
 
 [params]
 

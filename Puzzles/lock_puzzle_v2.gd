@@ -1,4 +1,4 @@
-extends Node3D
+extends Node2D
 
 @export var init_values = [0, 0, 0, 0] 
 @export var solution: String = "0000"
@@ -16,6 +16,8 @@ func _ready():
 	
 	for i in get_children():
 		print(i)
+	
+	print("...")
 
 func _process(delta):
 	if Input.is_action_just_pressed("check_puzzle"):
@@ -29,7 +31,7 @@ func _process(delta):
 	
 	#Change digit value
 	var current_object = get_child(current_index)
-	var number_rotation = current_object.rotation_degrees.y
+	var number_rotation: Node2D = current_object.rotation_degrees
 	
 	if Input.is_action_just_pressed("ui_up"):
 		number_rotation += delta_rotation
@@ -41,7 +43,7 @@ func _process(delta):
 	if values[current_index - init_index] < 0:
 		values[current_index - init_index] += 10
 	
-	current_object.rotation_degrees.y = number_rotation
+	current_object.rotation_degrees = number_rotation
 	values[current_index - init_index] %= 10
 	
 	#print(values[current_index])

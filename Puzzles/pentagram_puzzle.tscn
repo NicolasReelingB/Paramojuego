@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://8446l2okl734"]
+
+[ext_resource type="Script" path="res://Puzzles/pentagram_puzzle.gd" id="1_hnm4w"]
+[ext_resource type="Texture2D" uid="uid://klmj5xktlqe5" path="res://Puzzles/Sprites/astrolabe(1)/l2_sprite_1.png" id="2_4lhgx"]
+[ext_resource type="Texture2D" uid="uid://bxxqfn6eeqbs3" path="res://Puzzles/Sprites/astrolabe(1)/astrolabe-1.png1.png" id="2_h00i2"]
+
+[node name="Puzzle" type="Node2D"]
+
+[node name="Pentagram" type="Node2D" parent="."]
+script = ExtResource("1_hnm4w")
+
+[node name="OuterCircle" type="Sprite2D" parent="Pentagram"]
+position = Vector2(960, 540)
+texture = ExtResource("2_h00i2")
+
+[node name="InnerCircle" type="Sprite2D" parent="Pentagram"]
+position = Vector2(960, 540)
+texture = ExtResource("2_4lhgx")

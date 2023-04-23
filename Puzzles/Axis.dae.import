@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://71u5tf8mnxpe"
-path="res://.godot/imported/Axis.dae-e87db7861eaee10aa0784f8530ffc134.scn"
+path="res://.godot/imported/Axis.dae-9cccba20d61b3dc3191be6efbdab3228.scn"
 
 [deps]
 
-source_file="res://Axis.dae"
-dest_files=["res://.godot/imported/Axis.dae-e87db7861eaee10aa0784f8530ffc134.scn"]
+source_file="res://Puzzles/Axis.dae"
+dest_files=["res://.godot/imported/Axis.dae-9cccba20d61b3dc3191be6efbdab3228.scn"]
 
 [params]
 
