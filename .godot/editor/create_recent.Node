@@ -1,3 +1,7 @@
+TextureButton
+TextureRect
+GridContainer
+MeshInstance2D
 Control
 GPUParticles3D
 Camera3D
@@ -26,7 +30,4 @@ Area3D
 ProgressBar
 CollisionShape2D
 Area2D
-TextureRect
-MeshInstance2D
 Panel
-TextureProgressBar

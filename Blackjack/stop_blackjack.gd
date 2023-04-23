@@ -64,7 +64,8 @@ var deck = [["Ace of Hearts", 11, true],
 func _pressed():
 	
 	deck.shuffle()
-	give.visible = false
+	#give.visible = false
+	give.disabled = true
 	
 	for i in range(3):
 		var get_card = random.randi_range(0, deck.size() - 1)
@@ -77,6 +78,7 @@ func _pressed():
 	
 	if counter > 21:
 		victory.text = "Victory"
+		give.icon = load("res://Blackjack/Cards/joker_0.png")
 		visible = false
 	else:
 		for i in range(2):
@@ -91,8 +93,9 @@ func _pressed():
 		
 		if counter < int(counter_player.text) or counter > 21:
 			victory.text = "Victory"
+			give.icon = load("res://Blackjack/Cards/joker_0.png")
 		else:
-			victory.text = "You lost, motherfucker"
+			victory.text = "Defeat"
 			
 		visible = false
 	

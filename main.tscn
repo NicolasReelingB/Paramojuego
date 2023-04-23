@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://cfrrlqlu48fh5"]
+[gd_scene load_steps=27 format=3 uid="uid://cfrrlqlu48fh5"]
 
 [ext_resource type="PackedScene" uid="uid://b0mrxpk86n77w" path="res://player.tscn" id="1_racbl"]
 [ext_resource type="Script" path="res://SaveAndLoad/save_test.gd" id="1_sgvjn"]
@@ -10,8 +10,11 @@
 [ext_resource type="Texture2D" uid="uid://chw1s16kgl302" path="res://Images/black.jpg" id="5_arb02"]
 [ext_resource type="Texture2D" uid="uid://bvt1ljsml15a5" path="res://Images/Ball.png" id="5_w1vru"]
 [ext_resource type="Script" path="res://ball_move_control.gd" id="6_ubo5m"]
+[ext_resource type="Script" path="res://Inventory/inventory_interface.gd" id="7_at12t"]
 [ext_resource type="Texture2D" uid="uid://bdgmdi3jswucj" path="res://Images/arrow.png" id="7_dj2tn"]
+[ext_resource type="PackedScene" uid="uid://cu0hn35aqmdbp" path="res://Inventory/inventory.tscn" id="7_jyw8m"]
 [ext_resource type="Texture2D" uid="uid://cfd8hiw12hia3" path="res://Images/chile morron.png" id="8_yearo"]
+[ext_resource type="PackedScene" uid="uid://bx61q63sq6dsd" path="res://Inventory/slot.tscn" id="9_6ori8"]
 [ext_resource type="PackedScene" uid="uid://b5ly5fpl15s62" path="res://Models with Colliders/Bar.dae" id="10_bgmse"]
 [ext_resource type="PackedScene" uid="uid://brk75p6k1k6wb" path="res://Models with Colliders/BFH.dae" id="11_es40c"]
 
@@ -82,6 +85,29 @@ wait_time = 2.0
 
 [node name="UI" type="CanvasLayer" parent="."]
 
+[node name="InventoryInterface" type="Control" parent="UI"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("7_at12t")
+
+[node name="PlayerInventory" parent="UI/InventoryInterface" instance=ExtResource("7_jyw8m")]
+layout_mode = 1
+offset_left = -400.0
+offset_top = -400.0
+offset_right = 400.0
+offset_bottom = 400.0
+
+[node name="GrabbedSlot" parent="UI/InventoryInterface" instance=ExtResource("9_6ori8")]
+visible = false
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 200.0
+
 [node name="Air" type="ProgressBar" parent="UI"]
 anchors_preset = 2
 anchor_top = 1.0
@@ -106,15 +132,6 @@ offset_bottom = -14.0
 grow_vertical = 0
 rotation = -1.5708
 show_percentage = false
-
-[node name="InventoryInterface" type="Control" parent="UI"]
-visible = false
-layout_mode = 3
-anchors_preset = 0
-offset_left = 712.0
-offset_top = 586.0
-offset_right = 1139.0
-offset_bottom = 633.0
 
 [node name="Control" type="Control" parent="UI"]
 layout_mode = 3
@@ -194,3 +211,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 18)
 
 [node name="BFH" parent="." instance=ExtResource("11_es40c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.2186, 15.5124, 7.16515)
+
+[connection signal="toggle_inventory" from="Player" to="." method="_on_player_toggle_inventory"]
