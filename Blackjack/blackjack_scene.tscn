@@ -1,0 +1,160 @@
+[gd_scene load_steps=14 format=3 uid="uid://dt3uxmjvvh2oi"]
+
+[ext_resource type="Script" path="res://Blackjack/draw_blackjack.gd" id="1_6pr1n"]
+[ext_resource type="Texture2D" uid="uid://cpa48dygh55p8" path="res://Images/BlackJack_Background.png" id="1_8jy2m"]
+[ext_resource type="Texture2D" uid="uid://cepfl6mkwrrux" path="res://Blackjack/Cards/clubs_00.png" id="2_87fpl"]
+[ext_resource type="Script" path="res://Blackjack/stop_blackjack.gd" id="2_vsjov"]
+[ext_resource type="Texture2D" uid="uid://cxpqsp0t6jndm" path="res://Blackjack/Cards/ExitButton.png" id="4_n7nhe"]
+[ext_resource type="FontFile" uid="uid://dccxpf6sn8s45" path="res://Fonts/American Typewriter Regular.ttf" id="4_q81ab"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7ky2a"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_apyeh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2g1ug"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_85dgu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o6r2t"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0mkh4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2lia5"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_8jy2m")
+
+[node name="Name of card" type="Label" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -0.5
+offset_top = -34.5
+offset_right = 0.5
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+
+[node name="Counter" type="Label" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 642.5
+offset_top = 80.0
+offset_right = 643.5
+offset_bottom = 149.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_q81ab")
+theme_override_font_sizes/font_size = 50
+
+[node name="Give" type="Button" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 210.0
+offset_top = -506.0
+offset_right = 1010.0
+offset_bottom = 494.0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxEmpty_7ky2a")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_apyeh")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_2g1ug")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_85dgu")
+text = "
+"
+icon = ExtResource("2_87fpl")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("1_6pr1n")
+
+[node name="Victory" type="Label" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -655.25
+offset_top = 52.0
+offset_right = -654.25
+offset_bottom = 189.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_q81ab")
+theme_override_font_sizes/font_size = 100
+
+[node name="Stop" type="Button" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -169.0
+offset_top = 65.0
+offset_right = -69.0
+offset_bottom = 165.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxEmpty_o6r2t")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_0mkh4")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_2lia5")
+icon = ExtResource("4_n7nhe")
+expand_icon = true
+script = ExtResource("2_vsjov")
+
+[node name="LatestCard" type="TextureRect" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -835.0
+offset_top = -573.0
+offset_right = -435.0
+offset_bottom = 27.0
+grow_horizontal = 0
+grow_vertical = 2
+expand_mode = 1
+
+[node name="GridContainer" type="GridContainer" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1097.0
+offset_top = -681.0
+offset_right = 103.0
+offset_bottom = -81.0
+grow_horizontal = 0
+grow_vertical = 0
+columns = 3
+
+[node name="CardOne" type="TextureRect" parent="TextureRect/GridContainer"]
+custom_minimum_size = Vector2(300, 500)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+texture = ExtResource("2_87fpl")
+expand_mode = 1

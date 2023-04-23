@@ -1,0 +1,16 @@
+res://Inventory/letter_viewer.tscn
+res://Inventory/letter_viewer.gd
+res://Inventory/all_Letters.tres
+res://player.gd
+res://Stages/main_environment.tres
+res://inventory_struct.tres
+res://Inventory/Items/Codex.tres
+res://main.tscn
+res://Inventory/LetterTest.tres
+res://Inventory/letter.gd
+res://Inventory/inventory_interface.gd
+res://main.gd
+res://SaveAndLoad/save_test.gd
+res://Inventory/slot.gd
+res://Inventory/inventory_data.gd
+res://player.tscn

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="LetterData" load_steps=2 format=3 uid="uid://cp7gh288ut6dh"]
+
+[ext_resource type="Script" path="res://Inventory/letter.gd" id="1_mpel0"]
+
+[resource]
+script = ExtResource("1_mpel0")
+title = "Mom's Welcome to Paramo"
+sanityReq = 100
+bodyEncrypted = "Hi Pedro, Welcome to Paramo!
+I'm really glad that you were able to come all the way from [font=res://Fonts/SecretCodeRegular-1ylg.ttf]San Luis del Verde Meridiano[/font], I know this small pueblo can be a little small for you compared to that huge city, but at least you will get to see the place where me and your whole family. Pero bueno, don't forget to claim your abuelo's Will, that was his last wish and it would be a shame if nobody clamed it. I know you may be tired from the travel, that's why I left some sleeping herbs for you. Just throw them in some water and you will have a lovely siesta.
+With love,
+Mamá"
+trueBody = "Hi Pedro, Welcome to Paramo!
+I'm really glad that you were able to come all the way from [b]San Luis del Verde Meridiano[/b], I know this small pueblo can be a little small for you compared to that huge city, but at least you will get to see the place where me and your whole family. Pero bueno, don't forget to claim your abuelo's Will, that was his last wish and it would be a shame if nobody clamed it. I know you may be tired from the travel, that's why I left some sleeping herbs for you. Just throw them in some water and you will have a lovely siesta.
+With love,
+Mamá"
+collected = true
