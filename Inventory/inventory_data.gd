@@ -28,10 +28,8 @@ func pick_up_item(slot_data: SlotData) -> bool:
 			slot_datas[index] = slot_data
 			inventory_updated.emit(self)
 			return true
-	
-	
 	return false
 
 func on_slot_clicked(index: int, button: int) -> void:
-	#print("inventory")
+	print("inventory")
 	inventory_interact.emit(self, index, button)

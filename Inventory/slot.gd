@@ -16,4 +16,5 @@ func _on_gui_input(event):
 			and (event.button_index == MOUSE_BUTTON_LEFT \
 			or event.button_index == MOUSE_BUTTON_RIGHT) \
 			and event.is_pressed():
+				# print("Testing from Slot Component") Checked and works on component level, must be signal.
 				slot_clicked.emit(get_index(), event.button_index)

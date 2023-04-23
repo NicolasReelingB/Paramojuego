@@ -1,0 +1,188 @@
+[gd_resource type="Resource" script_class="LettersData" load_steps=14 format=3 uid="uid://c5y754v2ajop3"]
+
+[ext_resource type="Script" path="res://Inventory/letters.gd" id="1_n2jac"]
+[ext_resource type="Resource" uid="uid://cp7gh288ut6dh" path="res://Inventory/LetterTest.tres" id="1_n7wco"]
+[ext_resource type="Script" path="res://Inventory/letter.gd" id="2_886x6"]
+
+[sub_resource type="Resource" id="Resource_0q1nb"]
+script = ExtResource("2_886x6")
+title = "Test 2"
+sanityReq = 60
+bodyEncrypted = "Hermano, I know we haven't had the chance to meet and I don't know if this letter will reach you. Our familia can have some uncommon traditions. I know you must be hungry, mamá told me you really eat a lot, go to the tienda and you can maybe pay me a visit. And always remember: Take a deep breath. Specially when you go outside, recently Paramo's weather has been quite peculiar.
+
+With all love, tu querido hermano,
+José"
+trueBody = "Hermano, I know we haven't had the chance to meet and I don't know if this letter will reach you. Our familia can have some uncommon traditions. I know you must be hungry, mamá told me you really eat a lot, go to the tienda and you can maybe pay me a visit. And always remember: Take a deep breath. Specially when you go outside, recently Paramo's weather has been quite peculiar.
+
+With all love, tu querdio hermano
+José"
+collected = true
+
+[sub_resource type="Resource" id="Resource_p2nf0"]
+script = ExtResource("2_886x6")
+title = "A letter from a stranger"
+sanityReq = 100
+bodyEncrypted = "'Mijo, I'm afraid that being here may pose a great threat to you. Paramo has always been a mysterious place. Still, I think your fate has already been sealed. You MUST claim your abuelo's Will and try to get out of Paramo as soon as you can. Sometimes not knowing anything is the best option. So please, te lo ruego, take my advice. Talk with the alcalde, claim the Will, and get out.
+
+Cuidate
+
+P.S.
+I know you may want to meet your brother, but it might not be a good idea."
+trueBody = "'Mijo, I'm afraid that being here may pose a great threat to you. Paramo has always been a mysterious place. Still, I think your fate has already been sealed. You MUST claim your abuelo's Will and try to get out of Paramo as soon as you can. Sometimes not knowing anything is the best option. So please, te lo ruego, take my advice. Talk with the alcalde, claim the Will, and get out.
+
+Cuidate
+
+P.S.
+I know you may want to meet your brother, but it might not be a good idea."
+collected = true
+
+[sub_resource type="Resource" id="Resource_gwp00"]
+script = ExtResource("2_886x6")
+title = "Sales Report"
+sanityReq = 100
+bodyEncrypted = "Month sales:
+Cerveza, $4500
+[i]Tequila, $3600[/i]
+Mezcal, $2800
+Whisky, $1700
+Vodka, $1100
+Pulque, $950
+Agua ardiente, $450
+Sotol, $300"
+trueBody = "Month sales:
+Cerveza, $4500
+[i]Tequila, $3600[/i]
+Mezcal, $2800
+Whisky, $1700
+Vodka, $1100
+[i]Pulque, $950[/i]
+Agua ardiente, $450
+[i]Sotol, $300[/i]"
+collected = true
+
+[sub_resource type="Resource" id="Resource_mkas0"]
+script = ExtResource("2_886x6")
+title = "Letter in the Safe (Story of a Customer)"
+sanityReq = 100
+bodyEncrypted = "You were right. The rumors were right! That familia. They're up to no good. They never have. I overheard a conversation while working at that huge hacienda. And it looks like they were planning some kind of ritual. One of them said that they needed more \"offerings\" for the ceremony, and they suggested taking Amaya. They said they would tell her familia and everyone else that she would marry a rich man from Macondo to not arouse any suspicion. Right after he finished that sentence, I realized what may have happened to anyone who has \"left\" Paramo all of a sudden. They all have been used for those \"ceremonies\". Por Dios, they've been killed! I must get out of here. Paramo, no..., la familia Díaz is very dangerous. I hope no one saw me and knows that I know all this. You are the only one I trust. I think you will know what to do, you've always been smarter than me. I know you love your cantina, but I think your life is more important. Por favor, cuidate mucho
+
+Your dear amigo, Benito"
+trueBody = "You were right. The rumors were right! That familia. They're up to no good. They never have. I overheard a conversation while working at that huge hacienda. And it looks like they were planning some kind of ritual. One of them said that they needed more \"offerings\" for the ceremony, and they suggested taking Amaya. They said they would tell her familia and everyone else that she would marry a rich man from Macondo to not arouse any suspicion. Right after he finished that sentence, I realized what may have happened to anyone who has \"left\" Paramo all of a sudden. They all have been used for those \"ceremonies\". Por Dios, they've been killed! I must get out of here. Paramo, no..., la familia Díaz is very dangerous. I hope no one saw me and knows that I know all this. You are the only one I trust. I think you will know what to do, you've always been smarter than me. I know you love your cantina, but I think your life is more important. Por favor, cuidate mucho
+
+Your dear amigo, Benito"
+collected = true
+
+[sub_resource type="Resource" id="Resource_67khc"]
+script = ExtResource("2_886x6")
+title = "Note from the Sheriff"
+sanityReq = 100
+bodyEncrypted = "After four years of investigation, me and my team have gathered enough evidence to send almost every single member of the Díaz family. We've found everything, notes from their victims, the bodies in the river, their accounting reports, and some people have testified anonimously. But still, we can't do anything. For decades, they've been the richest and most powerful family in Paramo, and who knows, maybe in the whole country. They're untouchable! At the beginning, the head of the family tried to negociate with us so that we would stop, half the team took their filthy money and left the investigation right away. But then, he started to send threats, the more threats he gave us, the worse they were. When suddenly, instead of threats, he took action. First my teammates, then my amigos, and in the end... 'mija and mi amor. Every time he took someone away from me, I was more determined to burn down that familia. But now that he took the two people that I loved the most... I don't really know if I should keep going. I don't know what will happen to me or all this evidence. I know I'm next, but I just wish with all my heart, that he and his twisted familia burn in hell.
+
+Sheriff Montoya"
+trueBody = "After four years of investigation, me and my team have gathered enough evidence to send almost every single member of the Díaz family. We've found everything, notes from their victims, the bodies in the river, their accounting reports, and some people have testified anonimously. But still, we can't do anything. For decades, they've been the richest and most powerful family in Paramo, and who knows, maybe in the whole country. They're untouchable! At the beginning, the head of the family tried to negociate with us so that we would stop, half the team took their filthy money and left the investigation right away. But then, he started to send threats, the more threats he gave us, the worse they were. When suddenly, instead of threats, he took action. First my teammates, then my amigos, and in the end... 'mija and mi amor. Every time he took someone away from me, I was more determined to burn down that familia. But now that he took the two people that I loved the most... I don't really know if I should keep going. I don't know what will happen to me or all this evidence. I know I'm next, but I just wish with all my heart, that he and his twisted familia burn in hell.
+
+Sheriff Montoya"
+collected = true
+
+[sub_resource type="Resource" id="Resource_frv2o"]
+script = ExtResource("2_886x6")
+title = "Newpaper section"
+sanityReq = 100
+bodyEncrypted = "Bodies found in Santiago River
+August 7,1933
+Last night, during their patrol, police officers found three bodies at the riverbank of Santiago River, it was also disclosed that all bodies had some kind of \"mark\" in their necks. So far, police haven't identified the bodies, but it was reported that two of them are women around the age of 20 and a man around the age of 30. The new sheriff Montoya has stated that, due to the nature of the \"marks\" found in the bodies, this discovery might be related with the strange glyphs found near the Díaz hacienda three years ago, and that he and his team will investigate to find the culprit and bring justice to the victims and their families."
+trueBody = "Bodies found in Santiago River
+August 7,1933
+Last night, during their patrol, police officers found three bodies at the riverbank of Santiago River, it was also disclosed that all bodies had some kind of \"mark\" in their necks. So far, police haven't identified the bodies, but it was reported that two of them are women around the age of 20 and a man around the age of 30. The new sheriff Montoya has stated that, due to the nature of the \"marks\" found in the bodies, this discovery might be related with the strange glyphs found near the Díaz hacienda three years ago, and that he and his team will investigate to find the culprit and bring justice to the victims and their families."
+collected = true
+
+[sub_resource type="Resource" id="Resource_yg264"]
+script = ExtResource("2_886x6")
+title = "Abuelo's Will"
+sanityReq = 100
+bodyEncrypted = "Last Will and Testament of [font=res://Fonts/SecretCodeRegular-1ylg.ttf]Luis[/font] 
+
+I, Luis, being of sound mind and disposing memory, do hereby make, publish and declare this to be my Last Will and Testament.
+First, I bequeath all wealth and property of the Díaz Family to the singular inheritor that finds this will. The rites of the family must be carried out by the inheritor. Let him carry the family name unto further glory.
+Second, I hereby declare any heir unwilling to continue the family rites and customs be judged forfeit from the will. [font=res://Fonts/SecretCodeRegular-1ylg.ttf]They shan't escape the burden of the family[/font].
+Third, I appoint [font=res://Fonts/SecretCodeRegular-1ylg.ttf]Juan[/font] as the executor of my will. Granting unto him the full authority and power to sell, mortgage, lease, or otherwise dispose of any part of my estate, real or personal, as may be necessary or convenient to effect the purposes of this will. His word shall be taken as my own.
+
+In witness whereof, I have hereunto set my hand this [font=res://Fonts/SecretCodeRegular-1ylg.ttf][date] day of [month], [year][/font].
+
+Signed [font=res://Fonts/SecretCodeRegular-1ylg.ttf]Luis[/font]"
+trueBody = "Last Will and Testament of [b]Luis[/b]
+
+I, [b]Luis[/b], being of sound mind and disposing memory, do hereby make, publish and declare this to be my Last Will and Testament.
+First, I bequeath all wealth and property of the Díaz Family to the singular inheritor that finds this will. The rites of the family must be carried out by the inheritor. Let him carry the family name unto further glory.
+Second, I hereby declare any heir unwilling to continue the family rites and customs be judged forfeit from the will. [b]They shan't escape the burden of the family[/b].
+Third, I appoint [b]Juan[/b] as the executor of my will. Granting unto him the full authority and power to sell, mortgage, lease, or otherwise dispose of any part of my estate, real or personal, as may be necessary or convenient to effect the purposes of this will. His word shall be taken as my own.
+
+In witness whereof, I have hereunto set my hand this [b][date] day of [month], [year][/b].
+
+Signed Luis
+"
+collected = true
+
+[sub_resource type="Resource" id="Resource_ch54v"]
+script = ExtResource("2_886x6")
+title = "Police report"
+sanityReq = 100
+bodyEncrypted = "Report on the mysterious glyphs found at Cerro de San Pedro, 1930
+11:34 p.m., April 14
+A man rushed in the town hall screaming for help, he looked terrified and repeatedly said \"What I saw... it can't be anything good. It can't be of this world!\". After a few minutes we barely manage to calm him down and get him to tell us more about his situation. The only thing we could make out from everything he said was that we needed to explore the sorrounding area of the Díaz hacienda. We decide that it will be best if we investigate the area in that exact moment. Meanwhile, we get a medic to check on the man, he seems out of his mind.
+
+4:21 a.m., April 15
+When we arrived at the Díaz hacienda, we were greeted by the head of the family, as if he was already expecting our visit. Right when I was about to explain the situation and the purpose of our visit, he beckoned one of his henchman to lead the way for what we were looking for. After 15 minutes of walking, we find the scene described by the man that entered the ayuntamiento. There are some glyphs that none of us had seen before, and these seen to have been made with someones blood. While my partner inspects the area, I try interrogating the henchman, but I get no answer from him, not even a single reaction. A couple of minutes later, we head back to the ayuntamiento, not without trying to talk with the head of the Díaz family. Unsurprisingly, the henchman won't let us through, so we give up and just head back.
+
+6:53 a.m., April 15
+After searching for ours, we found the body of the man in a hole at the outskirts of the town. With it, we find a message saying \"Stop looking for answers\". Not only that, the medic that checked on our witness said that it seemed as though his psyche had been totally broken, as he was barely capable of speaking after leading us to that terrifying scenery. Later today, we will release a public statement about the events, but we can't involve the Díaz family, not yet. We need to gather more information to get to the bottom of all this.
+
+*Agregar \"fotografia\" de los geroglificos*"
+trueBody = "Report on the mysterious glyphs found at Cerro de San Pedro, 1930
+11:34 p.m., April 14
+A man rushed in the town hall screaming for help, he looked terrified and repeatedly said \"What I saw... it can't be anything good. It can't be of this world!\". After a few minutes we barely manage to calm him down and get him to tell us more about his situation. The only thing we could make out from everything he said was that we needed to explore the sorrounding area of the Díaz hacienda. We decide that it will be best if we investigate the area in that exact moment. Meanwhile, we get a medic to check on the man, he seems out of his mind.
+
+4:21 a.m., April 15
+When we arrived at the Díaz hacienda, we were greeted by the head of the family, as if he was already expecting our visit. Right when I was about to explain the situation and the purpose of our visit, he beckoned one of his henchman to lead the way for what we were looking for. After 15 minutes of walking, we find the scene described by the man that entered the ayuntamiento. There are some glyphs that none of us had seen before, and these seen to have been made with someones blood. While my partner inspects the area, I try interrogating the henchman, but I get no answer from him, not even a single reaction. A couple of minutes later, we head back to the ayuntamiento, not without trying to talk with the head of the Díaz family. Unsurprisingly, the henchman won't let us through, so we give up and just head back.
+
+6:53 a.m., April 15
+After searching for ours, we found the body of the man in a hole at the outskirts of the town. With it, we find a message saying \"Stop looking for answers\". Not only that, the medic that checked on our witness said that it seemed as though his psyche had been totally broken, as he was barely capable of speaking after leading us to that terrifying scenery. Later today, we will release a public statement about the events, but we can't involve the Díaz family, not yet. We need to gather more information to get to the bottom of all this.
+
+*Agregar \"fotografia\" de los geroglificos*"
+collected = true
+
+[sub_resource type="Resource" id="Resource_sfeff"]
+script = ExtResource("2_886x6")
+title = "List in the studio"
+sanityReq = 100
+bodyEncrypted = "[b]Payback list:[/b]
+Man from the report
+Benito Mendoza
+Officer Pérez
+Juan Rulfo
+Selena Montoya
+Marta Montoya
+Sheriff Montoya"
+trueBody = "[b]Payback list:[/b]
+Man from the report
+Benito Mendoza
+Officer Pérez
+Juan Rulfo
+Selena Montoya
+Marta Montoya
+Sheriff Montoya"
+collected = true
+
+[sub_resource type="Resource" id="Resource_u4n82"]
+script = ExtResource("2_886x6")
+title = "Letter from Mum"
+sanityReq = 100
+bodyEncrypted = "Hijo mio, you must know that these rituals have never been performed before. You risk everything the family stands for. Know that our family has done everything in our power to keep ourselves basking in the glory of god. No matter how complex the task may have been, God has granted us his aid and succor in every step. You, yourself have witnessed and grown surrounded by it, molded by the very rites that allow us our privilege. You're my proudest achievement, you've fulfilled god's every commandment with unflinching devotion. Do you remember all those souls you've reclaimed in God's name. All those that you've granted one final mercy, a place right by god in heaven. Know that by continuing forth with this ritual, you are forfeiting your place in God's name.
+"
+trueBody = "Hijo mio, you must know that these rituals have never been performed before. You risk everything the family stands for. Know that our family has done everything in our power to keep ourselves basking in the glory of god. No matter how complex the task may have been, God has granted us his aid and succor in every step. You, yourself have witnessed and grown surrounded by it, molded by the very rites that allow us our privilege. You're my proudest achievement, you've fulfilled god's every commandment with unflinching devotion. Do you remember all those souls you've reclaimed in God's name. All those that you've granted one final mercy, a place right by god in heaven. Know that by continuing forth with this ritual, you are forfeiting your place in God's name.
+"
+collected = true
+
+[resource]
+script = ExtResource("1_n2jac")
+letters = Array[ExtResource("2_886x6")]([ExtResource("1_n7wco"), SubResource("Resource_0q1nb"), SubResource("Resource_p2nf0"), SubResource("Resource_gwp00"), SubResource("Resource_mkas0"), SubResource("Resource_67khc"), SubResource("Resource_frv2o"), SubResource("Resource_yg264"), SubResource("Resource_ch54v"), SubResource("Resource_sfeff"), SubResource("Resource_u4n82"), null])

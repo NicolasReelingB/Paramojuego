@@ -1,10 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://dt3uxmjvvh2oi"]
+[gd_scene load_steps=14 format=3 uid="uid://dt3uxmjvvh2oi"]
 
 [ext_resource type="Script" path="res://Blackjack/draw_blackjack.gd" id="1_6pr1n"]
 [ext_resource type="Texture2D" uid="uid://cpa48dygh55p8" path="res://Images/BlackJack_Background.png" id="1_8jy2m"]
 [ext_resource type="Texture2D" uid="uid://cepfl6mkwrrux" path="res://Blackjack/Cards/clubs_00.png" id="2_87fpl"]
 [ext_resource type="Script" path="res://Blackjack/stop_blackjack.gd" id="2_vsjov"]
 [ext_resource type="Texture2D" uid="uid://cxpqsp0t6jndm" path="res://Blackjack/Cards/ExitButton.png" id="4_n7nhe"]
+[ext_resource type="FontFile" uid="uid://dccxpf6sn8s45" path="res://Fonts/American Typewriter Regular.ttf" id="4_q81ab"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7ky2a"]
 
@@ -63,6 +64,7 @@ offset_right = 643.5
 offset_bottom = 149.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_q81ab")
 theme_override_font_sizes/font_size = 50
 
 [node name="Give" type="Button" parent="TextureRect"]
@@ -98,6 +100,7 @@ offset_right = -654.25
 offset_bottom = 189.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_q81ab")
 theme_override_font_sizes/font_size = 100
 
 [node name="Stop" type="Button" parent="TextureRect"]

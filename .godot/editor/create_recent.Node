@@ -1,3 +1,4 @@
+Button
 TextureButton
 TextureRect
 GridContainer
@@ -13,7 +14,6 @@ Node2D
 Container
 Sprite2D
 AudioStreamPlayer
-Button
 CanvasLayer
 Label
 CanvasModulate
@@ -30,4 +30,3 @@ Area3D
 ProgressBar
 CollisionShape2D
 Area2D
-Panel

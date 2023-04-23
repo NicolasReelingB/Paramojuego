@@ -80,4 +80,8 @@ func _physics_process(delta: float) -> void:
 
 func interact() -> void:
 	if interact_ray.is_colliding():
-		print("interact with ", interact_ray.get_collider())
+		var interactedItem = interact_ray.get_collider().slot_data
+		if interactedItem is SlotData:
+			if inventory_data.pick_up_item(interactedItem):
+				print("Test3")
+				interact_ray.get_collider().queue_free()
