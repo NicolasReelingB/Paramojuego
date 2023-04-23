@@ -31,5 +31,4 @@ func pick_up_item(slot_data: SlotData) -> bool:
 	return false
 
 func on_slot_clicked(index: int, button: int) -> void:
-	print("inventory")
 	inventory_interact.emit(self, index, button)

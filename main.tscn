@@ -1,7 +1,7 @@
 [gd_scene load_steps=32 format=3 uid="uid://cfrrlqlu48fh5"]
 
-[ext_resource type="Script" path="res://main.gd" id="1_0ejru"]
 [ext_resource type="PackedScene" uid="uid://b0mrxpk86n77w" path="res://player.tscn" id="1_racbl"]
+[ext_resource type="Script" path="res://SaveAndLoad/save_test.gd" id="1_tray6"]
 [ext_resource type="Script" path="res://bar1_breath_control.gd" id="2_32lgb"]
 [ext_resource type="Script" path="res://trigger_controler.gd" id="2_bwjn8"]
 [ext_resource type="Environment" uid="uid://58jkkqao0npi" path="res://Stages/main_environment.tres" id="2_qxv7a"]
@@ -58,7 +58,7 @@ height_falloff = 0.696443
 edge_fade = 0.373213
 
 [node name="Main" type="Node"]
-script = ExtResource("1_0ejru")
+script = ExtResource("1_tray6")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("2_qxv7a")

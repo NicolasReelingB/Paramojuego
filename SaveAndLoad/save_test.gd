@@ -10,7 +10,6 @@ var player_inventory: InventoryData
 
 func _ready():
 	player.toggle_inventory.connect(toggle_inventory_interface)
-	inventory_interface.set_player_inventory_data(player.inventory_data)
 	_game_data = save_load_data.load_game_data()
 	_inventory.slot_datas = _game_data.inventory
 	
@@ -33,6 +32,8 @@ func _ready():
 	for item in player_inventory.slot_datas:
 		if item != null:
 			print(item.item_data.name)
+	
+	inventory_interface.set_player_inventory_data(player_inventory)
 
 #func _process(delta):
 	#if Input.is_action_just_pressed("pause"):
@@ -45,6 +46,9 @@ func _ready():
 func toggle_inventory_interface() -> void:
 	inventory_interface.visible = not inventory_interface.visible
 	if inventory_interface.visible:
+		inventory_interface.toggle_letter_interface.visible = true
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	else:
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	if inventory_interface.letter_viewer.visible:
+		inventory_interface.letter_viewer.visible = not inventory_interface.letter_viewer.visible

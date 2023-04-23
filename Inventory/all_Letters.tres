@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="LettersData" load_steps=14 format=3 uid="uid://c5y754v2ajop3"]
+[gd_resource type="Resource" script_class="LettersData" load_steps=15 format=3 uid="uid://c5y754v2ajop3"]
 
 [ext_resource type="Script" path="res://Inventory/letters.gd" id="1_n2jac"]
 [ext_resource type="Resource" uid="uid://cp7gh288ut6dh" path="res://Inventory/LetterTest.tres" id="1_n7wco"]
@@ -183,6 +183,14 @@ trueBody = "Hijo mio, you must know that these rituals have never been performed
 "
 collected = true
 
+[sub_resource type="Resource" id="Resource_jl0op"]
+script = ExtResource("2_886x6")
+title = "Test"
+sanityReq = 100
+bodyEncrypted = "Test letter"
+trueBody = "Test letter"
+collected = true
+
 [resource]
 script = ExtResource("1_n2jac")
-letters = Array[ExtResource("2_886x6")]([ExtResource("1_n7wco"), SubResource("Resource_0q1nb"), SubResource("Resource_p2nf0"), SubResource("Resource_gwp00"), SubResource("Resource_mkas0"), SubResource("Resource_67khc"), SubResource("Resource_frv2o"), SubResource("Resource_yg264"), SubResource("Resource_ch54v"), SubResource("Resource_sfeff"), SubResource("Resource_u4n82"), null])
+letters = Array[ExtResource("2_886x6")]([ExtResource("1_n7wco"), SubResource("Resource_0q1nb"), SubResource("Resource_p2nf0"), SubResource("Resource_gwp00"), SubResource("Resource_mkas0"), SubResource("Resource_67khc"), SubResource("Resource_frv2o"), SubResource("Resource_yg264"), SubResource("Resource_ch54v"), SubResource("Resource_sfeff"), SubResource("Resource_u4n82"), SubResource("Resource_jl0op")])

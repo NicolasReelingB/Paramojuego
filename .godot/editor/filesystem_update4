@@ -10,3 +10,6 @@ res://Inventory/LetterTest.tres
 res://Inventory/letter.gd
 res://Inventory/inventory_interface.gd
 res://main.gd
+res://SaveAndLoad/save_test.gd
+res://Inventory/slot.gd
+res://Inventory/inventory_data.gd
