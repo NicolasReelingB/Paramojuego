@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://cfrrlqlu48fh5"]
+[gd_scene load_steps=33 format=3 uid="uid://cfrrlqlu48fh5"]
 
 [ext_resource type="PackedScene" uid="uid://b0mrxpk86n77w" path="res://player.tscn" id="1_racbl"]
 [ext_resource type="Script" path="res://SaveAndLoad/save_test.gd" id="1_tray6"]
@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://b5ly5fpl15s62" path="res://Models with Colliders/Bar.dae" id="10_bgmse"]
 [ext_resource type="PackedScene" uid="uid://brk75p6k1k6wb" path="res://Models with Colliders/BFH.dae" id="11_es40c"]
 [ext_resource type="PackedScene" uid="uid://doj5xhu0enwhh" path="res://Inventory/letter_viewer.tscn" id="12_2knur"]
+[ext_resource type="PackedScene" uid="uid://csfq7p2rdai1y" path="res://Models with Colliders/FinalTown.glb" id="22_k3ley"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fea7p"]
 albedo_color = Color(0.552941, 0.32549, 0.0196078, 1)
@@ -69,6 +70,7 @@ shadow_enabled = true
 
 [node name="Ground" type="MeshInstance3D" parent="."]
 transform = Transform3D(15.9716, 0, 0, 0, 1.7235, 0, 0, 0, 7.53334, 0, 0, 0)
+visible = false
 mesh = SubResource("PlaneMesh_0d711")
 
 [node name="PickUpItem" parent="Ground" instance=ExtResource("3_jf6fp")]
@@ -76,6 +78,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.880245, 0.299413)
 slot_data = SubResource("Resource_uftlw")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Ground"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 0.999999, 0, 0, 0, 1, 0, 0, 0)
@@ -239,9 +242,13 @@ material = SubResource("FogMaterial_3yjn3")
 
 [node name="Bar" parent="." instance=ExtResource("10_bgmse")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 18)
+visible = false
 
 [node name="BFH" parent="." instance=ExtResource("11_es40c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.2186, 15.5124, 7.16515)
+visible = false
+
+[node name="FinalTown" parent="." instance=ExtResource("22_k3ley")]
 
 [connection signal="toggle_inventory" from="Player" to="." method="_on_player_toggle_inventory"]
 [connection signal="pressed" from="UI/InventoryInterface/toggleLetterInterface" to="UI/InventoryInterface" method="_on_toggle_letter_interface_pressed"]
