@@ -3,6 +3,8 @@ extends Node
 @onready var player: CharacterBody3D = $Player
 @onready var inventory_interface: Control = $UI/InventoryInterface
 
+const Necronomicon: SlotData = preload("res://Inventory/Items/Necronomicon.tres")
+
 func _ready() -> void:
 	player.toggle_inventory.connect(toggle_inventory_interface)
 	inventory_interface.set_player_inventory_data(player.inventory_data)
